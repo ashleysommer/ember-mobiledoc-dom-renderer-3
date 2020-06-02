@@ -1,16 +1,23 @@
 'use strict';
-
+const testWindowWidth = 1920;
+const testWindowHeight = 1080;
 module.exports = {
   test_page: 'tests/index.html?hidepassed',
   disable_watching: true,
   launch_in_ci: [
-    'Chrome'
+    'Firefox'
   ],
   launch_in_dev: [
-    'Chrome'
+    'Firefox'
   ],
   browser_start_timeout: 120,
   browser_args: {
+    Firefox: [
+      //'-headless',//comment this line out for debugging purpose
+      '--devtools',
+      `-width ${testWindowWidth}`,
+      `-height ${testWindowHeight}`
+    ],
     Chrome: {
       ci: [
         // --no-sandbox is needed when running Chrome inside a container
@@ -25,3 +32,4 @@ module.exports = {
     }
   }
 };
+

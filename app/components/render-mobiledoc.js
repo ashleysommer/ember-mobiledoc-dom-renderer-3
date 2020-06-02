@@ -1,0 +1,1 @@
+export { default } from 'ember-mobiledoc-dom-renderer-3/components/render-mobiledoc';

@@ -1,0 +1,8 @@
+<select {{on "change" this.selectMobiledoc}}>
+{{#each this.mobiledocNames as |name|}}
+<option value={{name}}>{{name}}</option>
+{{/each}}
+</select>
+
+<h2>rendered:</h2>
+<RenderMobiledoc @mobiledoc={{this.mobiledoc}} @cardNames={{this.cardNames}} @atomNames={{this.atomNames}} />
